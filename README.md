@@ -29,7 +29,6 @@ Pour exécuter les tests :
 
 # Quantum-Radiance-Officiel - Licence d'utilisation :
 Ce code source est mis à disposition sous les termes de la licence Creative Commons BY-NC-ND
-Ce qui signifie que tous les fichiers du projet (à l'exclusion des parties spécifiques aux projets de type MAVEN) sont soumis à la licence Creative Commons BY-NC-ND.
 Voici les termes simplifiés :
 * Attribution — Vous devez créditer l'Œuvre, intégrer un lien vers la licence et indiquer si des modifications ont été effectuées à l'Oeuvre. Vous devez indiquer ces informations par tous les moyens raisonnables, sans toutefois suggérer que l'Offrant vous soutient ou soutient la façon dont vous avez utilisé son Oeuvre.
 * Pas d’Utilisation Commerciale — Vous n'êtes pas autorisé à faire un usage commercial de cette Oeuvre, tout ou partie du matériel la composant.
