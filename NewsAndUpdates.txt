@@ -1,0 +1,67 @@
+TO DO :
+- radDriver() : Fix disconnection from Server.
+- radUsers.saveUsers() to save an updated list of users
+- adminControl() : RemoveUser command to delete an user from the database
+- adminControl() : updateUserExpiration command to update the expiration date (using user id or username)
+- adminControl() : addNewUser name="" key="" expiration=""
+- Prévoir la classe/objets SERVEURS pour les serveurs secondaires pour gérer des devices ++ et iOS
+- Prévoir d'ajouter dans les devices, les données serveurs pour établir le mode de connexion (local ou par autre serveur).
+- Prévoir un autre type de message d'authentification Serveur(s) Secondaires/principal
+- Partitionner la table d'utilisateur par PAYS
+- Partitionner la table de devices par serveur
+- Créer un interpréteur de commandes pour un langage primitif permettant d'intégrer des données dans une page HTML
+- Gérer le transfert d'applications vers le serveur et la gestion des données correspondantes (en jonction avec le compte utilisateur).
+
+// ****************************************************************************
+2019/10.03 :
+- Remplacement de la classe regDevices (utilisation de fichiers JSON) par la classe SqlDevices (utilisation de la base de données mySql) pour les devices connectés.
+- La Gestion de la date d'expiration pour les Devices est maintenant correctement gérée. 
+- Connexion/Déconnexion du device pleinement opérationnelle en tests normaux.
+- Déconnexion du device après 30 secondes d'inactivité sur connexion client<->serveur interrompue anormalement.
+
+// ****************************************************************************
+2019/09.29 :
+- mySqlConnect : Ajout de la connexion à la base de données mySql (uses Xampp) pour les données utilisateurs, périphériques et serveurs additionnels.
+- Remplacement de la classe regUsers (utilisation de fichiers JSON) par la classe SqlUsers (utilisation de base de données mySql ) pour les comptes utilisateurs
+- Ajout de la gestion de la date d'expiration des comptes utilisateurs lors de la connexion.
+
+// ****************************************************************************
+2019/09.26 :
+- Dissociation du type de message d'authentification reçu. Web ou Capabilities/Appium
+- Début de mise en place du serveur en mode WEB
+- Ouverture de pages HTML fonctionnelle.
+
+// ****************************************************************************
+2019.09.25 :
+- Mise en place de la 1ère video de démonstration du prototype
+
+// ****************************************************************************
+2019.09.18 : Update
+- adbSupport : Class added with method to run adb command + method to check if a device is connected.
+- radDeviceDriver : Class added to support Appium Android/iOS drivers
+- radDevices : Class added to handle the list of registered devices.
+- adminControl : added command to output devices list with current device state.
+
+// ****************************************************************************
+2019.09.17 : Update
+- radServerThread : user authentication is now working.
+
+// ****************************************************************************
+2019.09.16 : Update
+- adminControl : updated adb commands to return line per line
+- radUsers : update users list output to display users in a more readable form.
+
+// ****************************************************************************
+2019.09.15 : Update
+- radServer : Added command 'adb'
+- radUsers : new class added
+- radUsers.loadUsers() added to load users from userList.jSon file.
+- radUsers.addNewUserDetails() added to insert a new user in the user dataBase
+- radUsers.listUsers() & radUsers.outputUser() commands added to output user details in console.
+- adminControl added new command 'users' to list all available users in console
+
+// ****************************************************************************
+2019.09.13 : Initial
+- Start of the project
+- Server creation
+- Client request for authentification in progress

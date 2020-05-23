@@ -11,6 +11,21 @@ Tout comme les fermes de devices, il fonctionne avec un système de clef (UserKe
 
 # Quantum-Radiance-Officiel - Etat d'avancement du projet :
 Ce projet n'est pas terminé mais couvre déjà la gestion des utilisateurs et devices de tests sur base de données mySQL. La connexion au serveur, l'accès au téléphone et l'exécution de tests à distance. Le terme "Pas de modifications" est là pour m'assurer que je puisse mener le projet dans la direction que j'ai prévu initialement sans que d'autres variantes ne viennent perturber l'oeil extérieur. Son utilisation ne devrait se limiter qu'à des tests pour comprendre les principe de fonctionnement (apprentissage du système de réflexions de JAVA).
+Pour l'instant l'application doit être localisée dans le dossier du serveur compilé en JAR. Il est prévu d'ajouter le transfert client->Serveur, mais cela n'est pas encore développé.
+Le dossier target/web/ contient les pages internet du Serveur WEB.
+
+# Quantum-Radiance-Officiel - Installation :
+Il s'agit d'un projet de type MAVEN. Vous devez avoir installé Java, Appium Server et NodeJS. Il a été développé sous l'IDE Eclipse.
+Les tests base de donnée mySql ont été réalisés avec l'outil Xampp.
+La base de donnée utilisée a été exportée sous le dossier mySql/qRadiance.sql et doit être réinjectée avant tests
+Les UDID des deux devices enregistrés ont été supprimés de la base et doivent être mise à jour avec ceux de vos devices de test.
+Pour créer le fichier exécutable serveur :
+- Clic droit sur le fichier POM.XML, Run As : "Maven Install". LE fichier target/radiance-0.1-jar-with-dependencies.jar sera créé
+Pour démarrer le serveur :
+- Depuis une ligne de commande dans le dossier target : java -jar radiance-0.1-jar-with-dependencies.jar
+Pour exécuter les tests :
+- Le fichier APK de test est celui de l'application : https://play.google.com/store/apps/details?id=calculator.innovit.com.calculatrice&gl=FR . Elle doit être extraite en apk avec un outil style ApkExtractor puis placée comme tel dans le projet : target/test.apk
+- Pour démarrer le test, exécuter en mode "Java Application" le fichier démonstration : src/test/java/com/alcahest/QRadianceClient/radClient.java
 
 # Quantum-Radiance-Officiel - Licence d'utilisation :
 Ce code source est mis à disposition sous les termes de la licence Creative Commons BY-NC-ND
