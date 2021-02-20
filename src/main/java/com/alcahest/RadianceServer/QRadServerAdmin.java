@@ -26,7 +26,17 @@ public class QRadServerAdmin implements Runnable {
 				if ( Command != null ) {
 					// ************************************************************************************ ADB Commands
 					if ( Command.length() > 4 && Command.startsWith( "adb" ) ) {
-						adbCommand( Command );
+						switch( Command.toLowerCase() ) {
+						case "adb.getproductmodel()":
+							adbCommand( "adb getprop ro.product.model" );
+							break;
+						case "adb.getversion()":
+							adbCommand( "adb shell getprop ro.build.version.release" );
+							break;
+						default:
+							adbCommand( Command );
+							break;
+                        }
 						Command = null;
 					}
 					// ************************************************************************************ Static commands
@@ -60,6 +70,10 @@ public class QRadServerAdmin implements Runnable {
 								System.out.println( "list : Will output to the console, the list of all available commands" );
 								System.out.println( "adb -args : Will execute the adb tool. Command line must be entered like in normal CMD window" );
 								System.out.println( "users : Will output all the users available in the database" );
+								break;
+							case "update android list" :
+								serverCommands.loadAndroidDevicesList();
+								break;					
 							default:
 								System.out.println( "This command is not supported." );
 								System.out.println( "Type 'list' for the list of all available commands" );

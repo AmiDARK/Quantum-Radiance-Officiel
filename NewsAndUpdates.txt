@@ -12,6 +12,21 @@ TO DO :
 - Créer un interpréteur de commandes pour un langage primitif permettant d'intégrer des données dans une page HTML
 - Gérer le transfert d'applications vers le serveur et la gestion des données correspondantes (en jonction avec le compte utilisateur).
 
+In progress :
+- Détection des devices connectée,
+- Pour chaque device, si "non existant" dans la base (avec l'UDID) :
+  - retrouver les informations dans la liste de compatibilité de google
+  - Insérer le device dans la base de donnée mySql
+
+
+// ****************************************************************************
+2021.02.20 :
+- Ajout de la classe serverCommands pour les commandes spécifiques du serveur
+- Ajout de la méthode serverCommands.loadAndroidDevicesList() pour télécharger la dernière version de la liste de compatibilités de google
+- Ajout de la classe devicesDatas pour gérer les données d'un device récupérée dans la liste de compatibilités de google
+- Ajout de la méthode serverCommands.scanDevicesFromAdbScan() pour renvoyer la liste des UDID des devices connectés.
+- Ajout de la méthode serverCommands.getDeviceModelFromUDID( String UDID ) Pour renvoyer le modèle du device depuis son UDID (et pouvoir le retrouver dans la liste de compatibilités de google)
+
 // ****************************************************************************
 2019/10.03 :
 - Remplacement de la classe regDevices (utilisation de fichiers JSON) par la classe SqlDevices (utilisation de la base de données mySql) pour les devices connectés.
