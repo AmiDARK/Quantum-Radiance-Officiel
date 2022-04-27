@@ -1,7 +1,7 @@
 # Quantum-Radiance-Officiel - A propos de :
 Quantum-Radiance est un outil développé pour démontrer qu'il est possible, avec des moyens modestes, de développer un outil similaire aux fermes de devices que l'on trouve un peu partout sur le net.
 Il n'a pas été développé dans un but "commercial" mais plutôt dans une recherche singulière et éducationnelle. C'est la première raison pour laquelle la licence Creative Commons BY-NC-ND a été choisie pour l'ouverture de son code source (Pas d'utilisation commerciale).
-L'auteur (moi même) ne saurait être tenu pour responsable d'un quelconque problème pourvant survenir lors de son utilisation. Ce produit n'est partagé en code source que pour les objectifs suivants :
+L'auteur (moi même) ne saurait être tenu pour responsable d'un quelconque problème pouvant survenir lors de son utilisation. Ce produit n'est partagé en code source que pour les objectifs suivants :
 
 # Quantum-Radiance-Officiel - Objectif du projet :
 L'objectif de cet outil est principalement de démontrer qu'il est possible, directement en JAVA, d'utiliser un approche différente des approches classiques pour créer un serveur de gestion de devices utilisant Appium pour l'accès à distance, à ceux-ci. Il utilise une base de données mySQl pour gérer les utilisateurs enregistrés, les licences, et les devices disponibles.
