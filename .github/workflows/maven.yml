@@ -1,0 +1,23 @@
+name: build
+on:
+  push:
+  pull_request:
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up Temurin JDK 17
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+          cache: 'maven'
+      - name: Build (skip tests if none)
+        run: mvn -B -DskipTests package
+      - name: Archive fat JAR
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: quantum-radiance-jar
+          path: target/*-jar-with-dependencies.jar

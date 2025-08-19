@@ -1,0 +1,14 @@
+services:
+  db:
+    image: mysql:8
+    environment:
+      MYSQL_DATABASE: qRadiance
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_USER: qrad
+      MYSQL_PASSWORD: qrad
+    ports: ["3306:3306"]
+    volumes:
+      - ./mySql:/docker-entrypoint-initdb.d:ro
+  adminer:
+    image: adminer:latest
+    ports: ["8080:8080"]
